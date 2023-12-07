@@ -175,9 +175,42 @@ if(typeLevel === 'Cuorse'){
 
 //Ejercicio 11:
 
+let priceCoche = 0.20;
+let priceMoto = 0.10;
+let priceAutobus = 0.5;
+
+
 let tipoVehiculo = prompt('Tipo de vehículo?: Coche / Moto /Autobús');
-let klRecorridos = prompt('Cuántos kilómetros recorrites?')
+let kmRecorridos = Number(prompt('Cuántos kilómetros recorrites?'));
 
 if (tipoVehiculo === 'Coche'){
-    
+    if( 1 <=  kmRecorridos >= 100) {
+        total = priceCoche * kmRecorridos + 5;
+        console.log('Su pago total es: $' + total);
+    } else if (kmRecorridos > 100) {
+        total = priceCoche * kmRecorridos + 10;
+    } else {
+        total = priceCoche * kmRecorridos;
+        console.log('Su pago total es: $' + total);
+    }
+} else if (tipoVehiculo === 'Moto'){
+    if( 1 <=  kmRecorridos >= 100) {
+        total = priceMoto * kmRecorridos + 5;
+        console.log('Su pago total es: $' + total);
+    } else if (kmRecorridos > 100) {
+        total = priceMoto * kmRecorridos + 10;
+    } else {
+        total = priceMoto * kmRecorridos;
+        console.log('Su pago total es: $' + total);
+    }
+} else if(tipoVehiculo === 'Autobus') {
+    if( 1 <=  kmRecorridos >= 100) {
+        total = priceAutobus * kmRecorridos + 5;
+        console.log('Su pago total es: $' + total);
+    } else if (kmRecorridos > 100) {
+        total = priceAutobus * kmRecorridos + 10;
+    } else {
+        total = priceAutobus * kmRecorridos;
+        console.log('Su pago total es: $' + total);
+    }
 }
